@@ -99,3 +99,7 @@ Create the directory for projectlamp using ‘mkdir’ command as follows:
  To disable Apache’s default website use a2dissite command , type: *sudo a2dissite 000-default*
  To make sure your configuration file doesn’t contain syntax errors, run: *sudo apache2ctl configtest*
  Reload Apache so these changes take effect: *sudo systemctl reload apache2*
+  
+ Now go to your browser and try to open your website URL using IP address:
+
+http://<Public-IP-Address>:80
