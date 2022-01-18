@@ -53,3 +53,13 @@ Open a web browser of your choice and try to access following url:
   Access MySQL console by typing: *sudo mysql*
 
   <img width="568" alt="access mysql" src="https://user-images.githubusercontent.com/51254648/149956155-c4b18315-a15b-4e85-9e36-f97d88fe549a.png">
+
+  
+  ## STEP 3 — INSTALLING PHP
+  We need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies. To install these 3 packages at once, run:
+
+*sudo apt install php libapache2-mod-php php-mysql*
+  
+  After installation, Check the version using this command:
+  *php -v*
+  
