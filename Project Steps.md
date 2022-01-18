@@ -8,12 +8,13 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
   
 - run apache2 package installation:
-  
   *#sudo apt install apache2*
+  <img width="1280" alt="Install apache2" src="https://user-images.githubusercontent.com/51254648/149949310-b992f369-e0fa-4dd2-93fc-b1fecf6432dc.png">
   
  We used the below cmdlet to confirm that Nginx server is active
 
 *$ sudo systemctl status nginx*
+
 
 open inbound connection through port 80:
 
