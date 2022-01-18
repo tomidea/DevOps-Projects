@@ -92,14 +92,18 @@ Create the directory for projectlamp using ‘mkdir’ command as follows:
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
   
- Use the ls command to show the new file in the sites-available directory
+  <img width="375" alt="Barebone text" src="https://user-images.githubusercontent.com/51254648/149966439-e50de19e-2c98-4bc8-b5fd-d68d01baf745.png"> 
+ 
+  Use the ls command to show the new file in the sites-available directory
 
 *sudo ls /etc/apache2/sites-available*
+  
   
  To disable Apache’s default website use a2dissite command , type: *sudo a2dissite 000-default*
  To make sure your configuration file doesn’t contain syntax errors, run: *sudo apache2ctl configtest*
  Reload Apache so these changes take effect: *sudo systemctl reload apache2*
-  
- Now go to your browser and try to open your website URL using IP address:
+  <img width="1278" alt="enable new virtual host" src="https://user-images.githubusercontent.com/51254648/149966461-3d26f7ca-2d03-41c8-95a4-bfd23234a41c.png">
 
-http://<Public-IP-Address>:80
+ Now go to your browser and try to open your website URL using IP address: *http://52.91.92.61:80*
+  <img width="1279" alt="Access apache virtual host on browser" src="https://user-images.githubusercontent.com/51254648/149966455-7974e38d-8474-4793-a42a-15cf5bf638de.png">
+  
