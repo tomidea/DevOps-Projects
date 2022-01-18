@@ -38,4 +38,14 @@ Open a web browser of your choice and try to access following url:
 *http://<Public-IP-Address>:80*
  <img width="1278" alt="Apache2 default page" src="https://user-images.githubusercontent.com/51254648/149950847-6f7930b5-340f-4c10-b570-69205a633c54.png">
 
- 
+ ## STEP 2 — INSTALLING MYSQL
+  
+  Again, use ‘apt’ to acquire and install this software:
+
+*sudo apt install mysql-server*
+  
+  
+  This script will remove some insecure default settings and lock down access to your database system. Start the interactive script by running:
+*sudo mysql_secure_installation*
+  
+  Access MySQL console by typing: *sudo mysql*
