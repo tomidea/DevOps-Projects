@@ -43,9 +43,12 @@ Open a web browser of your choice and try to access following url:
   Again, use ‘apt’ to acquire and install this software:
 
 *sudo apt install mysql-server*
-  
+  <img width="1275" alt="Install My-sql" src="https://user-images.githubusercontent.com/51254648/149956124-8cf828c0-aeac-492c-ae6b-59e5922b905b.png">
   
   This script will remove some insecure default settings and lock down access to your database system. Start the interactive script by running:
 *sudo mysql_secure_installation*
-  
+ <img width="720" alt="mysql secure installation" src="https://user-images.githubusercontent.com/51254648/149956149-002608d0-a56f-48b0-8746-3d78613f0126.png">
+ 
   Access MySQL console by typing: *sudo mysql*
+
+  <img width="568" alt="access mysql" src="https://user-images.githubusercontent.com/51254648/149956155-c4b18315-a15b-4e85-9e36-f97d88fe549a.png">
