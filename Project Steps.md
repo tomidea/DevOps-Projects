@@ -113,12 +113,18 @@ Create the directory for projectlamp using ‘mkdir’ command as follows:
   With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. To change this behavior, we need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
   
   *sudo vim /etc/apache2/mods-enabled/dir.conf*
+  
   <IfModule mod_dir.c>
         #Change this:
-        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
-        #To this:
-        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+        
+    DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+       
+    #To this:
+       
+    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
+  
+  <img width="601" alt="change behaviour" src="https://user-images.githubusercontent.com/51254648/149970432-6140d3b2-78f6-420d-aed3-3ea43fd9f4c2.png">
   
   Save and reload Apache server: *sudo systemctl reload apache2*
   
@@ -126,10 +132,13 @@ Create the directory for projectlamp using ‘mkdir’ command as follows:
     *vim /var/www/projectlamp/index.php*
   
   Add the following text, which is valid PHP code, inside the file:
-<?php
-phpinfo();
+
+
+<img width="153" alt="PHP code" src="https://user-images.githubusercontent.com/51254648/149970429-77efc3c6-8393-4fea-8565-ce18e733a138.png">
 
 When you are finished, save and close the file, refresh the page and you will see a page similar to this:
+
+<img width="1154" alt="PHP page" src="https://user-images.githubusercontent.com/51254648/149970401-3943de7f-c7f8-4c66-b258-cc629d3cf572.png">
 
   
 After checking the relevant information about our PHP server through that page, it’s best to remove the file we created as it contains sensitive information about your PHP environment -and our Ubuntu server. You can use rm to do so:
