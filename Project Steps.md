@@ -66,4 +66,36 @@ After installation, Check the version using this command:
 
   <img width="485" alt="PHP version" src="https://user-images.githubusercontent.com/51254648/149958307-f75fe5d1-2bc7-4417-9b58-ea3568eea2ce.png">
   
+
+  ## STEP 4 — CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
+  Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory.
+  We will leave this configuration as is and will add our own directory next next to the default one.
+
+Create the directory for projectlamp using ‘mkdir’ command as follows:
+  *sudo mkdir /var/www/projectlamp*
+ 
+ Next, assign ownership of the directory with your current system user:
+
+ *sudo chown -R $USER:$USER /var/www/projectlamp*
+
+ Create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor.
+  *sudo vi /etc/apache2/sites-available/projectlamp.conf*
   
+  Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
+  
+  <VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+  
+ Use the ls command to show the new file in the sites-available directory
+
+*sudo ls /etc/apache2/sites-available*
+  
+ To disable Apache’s default website use a2dissite command , type: *sudo a2dissite 000-default*
+ To make sure your configuration file doesn’t contain syntax errors, run: *sudo apache2ctl configtest*
+ Reload Apache so these changes take effect: *sudo systemctl reload apache2*
