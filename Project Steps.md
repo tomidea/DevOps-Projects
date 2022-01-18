@@ -47,7 +47,8 @@ Open a web browser of your choice and try to access following url:
   
   This script will remove some insecure default settings and lock down access to your database system. Start the interactive script by running:
 *sudo mysql_secure_installation*
- <img width="720" alt="mysql secure installation" src="https://user-images.githubusercontent.com/51254648/149956149-002608d0-a56f-48b0-8746-3d78613f0126.png">
+ 
+  <img width="720" alt="mysql secure installation" src="https://user-images.githubusercontent.com/51254648/149956149-002608d0-a56f-48b0-8746-3d78613f0126.png">
  
   Access MySQL console by typing: *sudo mysql*
 
