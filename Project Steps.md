@@ -59,7 +59,11 @@ Open a web browser of your choice and try to access following url:
   We need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies. To install these 3 packages at once, run:
 
 *sudo apt install php libapache2-mod-php php-mysql*
-  
-  After installation, Check the version using this command:
+   <img width="1074" alt="install 3 core packages" src="https://user-images.githubusercontent.com/51254648/149958291-179e8c39-5ba2-479c-8963-ed96f41224be.png">
+
+After installation, Check the version using this command:
   *php -v*
+
+  <img width="485" alt="PHP version" src="https://user-images.githubusercontent.com/51254648/149958307-f75fe5d1-2bc7-4417-9b58-ea3568eea2ce.png">
+  
   
