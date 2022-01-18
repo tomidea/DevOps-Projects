@@ -98,6 +98,7 @@ Create the directory for projectlamp using ‘mkdir’ command as follows:
 
 *sudo ls /etc/apache2/sites-available*
   
+  <img width="453" alt="Show new file" src="https://user-images.githubusercontent.com/51254648/149967344-7a7d739f-5163-40f9-b9e4-12aca8dae6e2.png">
   
  To disable Apache’s default website use a2dissite command , type: *sudo a2dissite 000-default*
  To make sure your configuration file doesn’t contain syntax errors, run: *sudo apache2ctl configtest*
@@ -106,4 +107,32 @@ Create the directory for projectlamp using ‘mkdir’ command as follows:
 
  Now go to your browser and try to open your website URL using IP address: *http://52.91.92.61:80*
   <img width="1279" alt="Access apache virtual host on browser" src="https://user-images.githubusercontent.com/51254648/149966455-7974e38d-8474-4793-a42a-15cf5bf638de.png">
+ 
   
+ ## STEP 5 — ENABLE PHP ON THE WEBSITE
+  With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. To change this behavior, we need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+  
+  *sudo vim /etc/apache2/mods-enabled/dir.conf*
+  <IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+  
+  Save and reload Apache server: *sudo systemctl reload apache2*
+  
+  Create a new file named index.php inside your custom web root folder:
+    *vim /var/www/projectlamp/index.php*
+  
+  Add the following text, which is valid PHP code, inside the file:
+<?php
+phpinfo();
+
+When you are finished, save and close the file, refresh the page and you will see a page similar to this:
+
+  
+After checking the relevant information about our PHP server through that page, it’s best to remove the file we created as it contains sensitive information about your PHP environment -and our Ubuntu server. You can use rm to do so:
+
+*sudo rm /var/www/projectlamp/index.php*
+
