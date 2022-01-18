@@ -15,10 +15,27 @@ Install Apache using Ubuntu’s package manager ‘apt’:
  We used the below cmdlet to confirm that Nginx server is active
 
 *$ sudo systemctl status nginx*
+
 <img width="651" alt="Apache running active" src="https://user-images.githubusercontent.com/51254648/149950174-78930ed3-cebf-42b5-8dca-1f50d0ffe80e.png">
 
 Edit the inbound rule to open inbound connection through port 80:
 
+<img width="1219" alt="open inbound connection port 80" src="https://user-images.githubusercontent.com/51254648/149950744-2e7d2016-1315-41da-89ce-94b154bb65c7.png">
 
+let us try to check how we can access it locally in our Ubuntu shell, run:
+curl http://localhost:80
+
+<img width="907" alt="Access apache2 on shell" src="https://user-images.githubusercontent.com/51254648/149950820-fe159464-d7b4-4fdf-9c94-ab46dee738d3.png">
+
+or
+ curl http://127.0.0.1:80
+ <img width="993" alt="access apache2 on shell 2" src="https://user-images.githubusercontent.com/51254648/149950841-7fbaf4cb-54d9-4820-8b3f-da41c5061496.png">
+
+ 
 Let's test how our Apache HTTP server can respond to requests from the Internet.
-Open a web browser of your choice and try to access following url: http://<Public-IP-Address>:80
+Open a web browser of your choice and try to access following url: 
+
+*http://<Public-IP-Address>:80*
+ <img width="1278" alt="Apache2 default page" src="https://user-images.githubusercontent.com/51254648/149950847-6f7930b5-340f-4c10-b570-69205a633c54.png">
+
+ 
